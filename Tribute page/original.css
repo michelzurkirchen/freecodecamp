@@ -1,0 +1,62 @@
+body {
+  width: 70%;
+  margin: auto;
+  background-color: #ededed;
+  font-family: Lato, georgia, sans-serif;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+hr {
+  opacity: 0.2;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.7em;
+}
+
+#image {
+  display: block;
+  max-width: 40%;
+  margin: auto;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+}
+
+#img-caption {
+  text-align: center;
+  margin-top: 1%;
+}
+
+.icon {
+  width: 25px;
+}
+
+#find {
+  text-align: center;
+}
+
+#outbound-links {
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  justify-content: left;
+  align-items: end;
+  grid-column-gap: 2%;
+}
+
+@media (max-width: 500px) {
+  #image {
+    max-width: 80%;
+  }
+
+  #outbound-links {
+    justify-content: center;
+  }
+}
