@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="original.css" type="text/css">
+  <title>Podcast survey</title>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>
+
+<body>
+<main>
+  <header>
+    <h1 id="title">Podcast survey</h1>
+  </header>
+  <p id="description">We believe that podcasts can be done better. Help us to develop a better platform for millions of podcast listeners world wide.</p>
+
+  <form id="survey-form">
+    <label id="name-label" class="left" for="name">Name</label>
+    <input id="name" class="box" type="text" required pattern="([a-zA-Z]|-){2,30} ([a-zA-Z]|-){2,30}" placeholder="Your full name">
+
+    <label id="email-label" class="left" for="email">Email</label>
+    <input id="email" class="box" type="email" required placeholder="Your email address">
+
+    <label id="number-label" class="left" for="number">Your age</label>
+    <input id="number" class="box" type="number" min="13" max="100" placeholder="Your age" pattern="[0-9]+">
+
+    <label for="dropdown" class="left">How often do you listen to podcasts?</label>
+    <select id="dropdown" class="box">
+      <option value="daily">Every day</option>
+      <option value="frequent">A few times a week</option>
+      <option value="weekly">Once a week</option>
+      <option value="infrequent">Less than once a week</option>
+    </select>
+
+    <fieldset id="recommend">
+      <legend class="left">How likely are you to recommend a podcast to someone?</legend>
+      <div class="options"> <label><input type="radio" name="recommend" value="5">
+      Very likely</label>
+        <label><input type="radio" name="recommend" value="4">
+      Likely</label>
+        <label><input type="radio" name="recommend" value="3">
+      Neutral</label>
+        <label><input type="radio" name="recommend" value="2">
+      Unlikely</label>
+        <label><input type="radio" name="recommend" value="1">
+      Very unlikely</label>
+      </div>
+    </fieldset>
+
+    <fieldset id="genre">
+      <legend class="left">Which genre(s) do you listen to?</legend>
+      <div class="options">
+      <label><input type="checkbox" name="genre" value="business">
+      Business</label>
+      <label><input type="checkbox" name="genre" value="comedy">
+      Comedy</label>
+      <label><input type="checkbox" name="genre" value="educational">
+      Educational</label>
+      <label><input type="checkbox" name="genre" value="fiction">
+      Fiction</label>
+      <label><input type="checkbox" name="genre" value="gaming">
+      Gaming</label>
+      <label><input type="checkbox" name="genre" value="interview">
+      Interview</label>
+      <label><input type="checkbox" name="genre" value="music">
+      Music</label>
+      <label><input type="checkbox" name="genre" value="news">
+      News</label>
+      <label><input type="checkbox" name="genre" value="politics">
+      Politics</label>
+      <label><input type="checkbox" name="genre" value="sports">
+      Sports</label>
+      <label><input type="checkbox" name="genre" value="tech">
+      Tech</label>
+      <label><input type="checkbox" name="genre" value="other">
+      Other</label>
+      </div>
+    </fieldset>
+
+    <label for="platforms" class="left">On which platforms do you listen to podcasts?</label>
+    <textarea rows="4" cols="20" class="platforms right box"></textarea>
+    <button id="submit" type="submit">Submit</button>
+  </form>
+
+</main>
+</body>
+</html>
