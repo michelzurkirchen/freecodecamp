@@ -1,0 +1,5 @@
+Significant changes
+- Change body width on smaller screens.
+- Add border-radius: 50% to img.
+- Change img max-width on smaller screens.
+- Change classes to follow BEM guidelines.
