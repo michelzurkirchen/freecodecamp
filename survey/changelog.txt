@@ -1,3 +1,4 @@
 Significant changes
 - Change id and classes to follow BEM guidelines.
 - Use JavaScript to correctly identify valid and invalid inputs.
+- Add meta tags.
