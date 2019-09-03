@@ -1,0 +1,3 @@
+Significant changes
+- Change id and classes to follow BEM guidelines.
+- Add meta tags.
