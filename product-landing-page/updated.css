@@ -6,6 +6,7 @@ body {
   font-family: Poppins, sans-serif;
   text-align: center;
   background-image: url("https://trustyoak.com/sitefiles/wp-content/uploads/2017/08/new-header.png");
+  background-repeat: no-repeat;
   background-position: left 0px top 0px;
   background-attachment: fixed;
   padding-bottom: 5%;
