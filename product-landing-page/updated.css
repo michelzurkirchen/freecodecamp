@@ -6,6 +6,7 @@ body {
   font-family: Poppins, sans-serif;
   text-align: center;
   background-image: url("https://trustyoak.com/sitefiles/wp-content/uploads/2017/08/new-header.png");
+  background-repeat: no-repeat;
   background-position: left 0px top 0px;
   background-attachment: fixed;
   padding-bottom: 5%;
@@ -149,7 +150,7 @@ textarea {
   font-family: Poppins, sans-serif;
 }
 
-.no-price {
+.package__no-price {
   visibility: hidden;
 }
 
@@ -158,18 +159,28 @@ textarea {
     flex-direction: column;
   }
 
-  .no-price {
+  .package__no-price {
     display: none;
   }
 }
 
 @media (max-width: 450px) {
-  .nav-link {
+  .nav-bar__nav-link {
     font-size: 14px;
     padding-right: 1%;
   }
 
-  #header-img {
-    display: none;
+  #logo {
+    max-width: 30px;
+    max-height: 30px;
+    margin-top: 10px;
+  }
+
+#contact__form__email,#contact__form__message {
+  border: 1px solid grey;
+}
+
+  #contact__form__submit {
+    border: 1px solid grey;
   }
 }
