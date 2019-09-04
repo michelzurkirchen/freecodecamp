@@ -1,0 +1,215 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #fafafa;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  height: 100%;
+  background-color: #f3f3f3;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  border-right: 1px solid black;
+}
+
+h1 {
+  font-size: 27px;
+  color: black;
+  padding-left: 20px;
+  left: 0px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid black;
+}
+
+h2 {
+  padding-top: 10px;
+}
+
+h3 {
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+.nav-header {
+  left: 0px;
+  padding: 0px 0px 0px 12px;
+  font-weight: bold;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  padding: 10px 0px 10px 20px;
+  left: 0px;
+}
+
+.nav-link:hover {
+  color: #eb404b;
+}
+
+#main-doc {
+  margin-left: 170px;
+  margin-right: 15px;
+}
+
+p {
+  text-align: justify;
+}
+
+#hamburger-checkbox,
+#hamburger-label {
+  display: none;
+}
+
+pre.multi,
+code.single {
+  display: inline-block;
+  max-width: 95%;
+  overflow: auto;
+  background-color: #e0e0e0;
+  padding: 5px;
+  border: 1px solid grey;
+}
+
+@media (max-width: 780px) {
+  #navbar {
+    top: 0px;
+    width: 100%;
+    height: 40px;
+    z-index: 0;
+  }
+
+  .nav-link,
+  .nav-header {
+    visibility: hidden;
+  }
+
+  #main-doc {
+    margin: 20px 5px 0px 5px;
+  }
+
+  h1 {
+    display: block;
+    border: none;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  #hamburger-label {
+    position: fixed;
+    display: inline;
+    cursor: pointer;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png");
+    background-size: 25px 25px;
+    width: 25px;
+    height: 25px;
+    top: 8px;
+    right: 10px;
+    z-index: 1;
+  }
+
+  #hamburger-checkbox {
+    display: none;
+  }
+
+  #hamburger-checkbox:checked + label {
+    background-image: url("https://i.imgur.com/f4sJDUK.png");
+  }
+
+  #hamburger-checkbox:checked ~ #navbar {
+    border-bottom: 1px solid black;
+    background-color: #d9d9d9;
+    animation-name: nav-in;
+    animation-delay: 100ms;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+  }
+
+  #hamburger-checkbox:not(:checked) ~ #navbar {
+    animation-name: nav-out;
+    animation-delay: 10ms;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+  }
+
+  #hamburger-checkbox:checked ~ #navbar > header > h1 {
+    border-bottom: 1px solid black;
+    background-color: #f3f3f3;
+  }
+
+  #hamburger-checkbox:not(:checked) ~ #navbar > header > h1 {
+    border-bottom: none;
+    animation-name: border;
+    animation-delay: 1s;
+  }
+
+  #hamburger-checkbox:checked ~ #navbar > .nav-link {
+    visibility: visible;
+    opacity: 0;
+    text-align: left;
+    animation-name: nav-link-in;
+    animation-delay: 100ms;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  #hamburger-checkbox:checked ~ #navbar > .nav-header {
+    visibility: visible;
+    opacity: 0;
+    text-align: left;
+    animation-name: nav-header-in;
+    animation-delay: 100ms;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  .main-section {
+    padding-top: 20px;
+  }
+
+  @keyframes nav-in {
+    from {
+      height: 40px;
+    }
+    to {
+      height: 450px;
+    }
+  }
+
+  @keyframes nav-out {
+    from {
+      height: 450px;
+      border-bottom: 1px solid black;
+    }
+    to {
+      height: 40px;
+    }
+  }
+
+  @keyframes nav-header-in {
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes nav-link-in {
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes border {
+    100% {
+      border: none;
+    }
+  }
+}
