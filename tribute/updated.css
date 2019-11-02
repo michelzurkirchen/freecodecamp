@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+
 body {
   width: 70%;
   margin: auto;
@@ -34,16 +37,16 @@ p {
   margin-top: 1%;
 }
 
-.icons__icon {
-  width: 25px;
-}
-
 .icons {
   display: grid;
   grid-template-columns: repeat(5, 50px);
   justify-content: left;
   align-items: end;
   grid-column-gap: 2%;
+}
+
+.icons__icon {
+  width: 25px;
 }
 
 @media (max-width: 500px) {
