@@ -1,4 +1,4 @@
 function validate() {
   const element = event.target
-  element.classList.add("submitted")
+  element.classList.add("survey-form--submitted")
 }

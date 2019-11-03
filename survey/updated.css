@@ -1,85 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
 body {
   background-color: #f0f0f0;
   max-width: 80%;
   text-align: center;
   margin: auto;
-  padding-top: 20px;
-  padding-bottom: 50px;
   font-family: Montserrat, Monospace;
   font-size: 14px;
-  line-height: 200%;
+}
+
+h1 {
+  margin-bottom: 40px;
 }
 
 #description {
-  text-align: center;
-  line-height: 140%;
-  margin: 30px auto 20px auto;
+  text-align: justify;
+  max-width: 50%;
+  margin: 20px auto;
 }
 
 #survey-form {
-  display: grid;
-  min-width: 340px;
-  grid-template-columns: 1fr 1fr;
-  grid-row-gap: 5%;
+  display: flex;
+  flex-direction: column;
   background-color: #86bbd8;
   border-radius: 15px;
-  padding-bottom: 280px;
-  padding-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 80px;
+
 }
 
-.survey-form__left {
-  text-align: right;
-  margin-right: 6%;
+.survey-form__label {
+  margin: 25px auto 5px auto;
 }
 
 .survey-form__box {
-  max-width: 70%;
+  width: 200px;
+  height: 25px;
+  margin: auto;
   border: solid grey 1px;
   border-radius: 5px;
-  padding-left: 10px;
+  text-align: center;
 }
 
-textarea {
-  max-width: 70%;
-  border-radius: 5px;
-}
-
-#survey-form__recommend {
-display: contents;
-}
-
-#survey-form__genre {
-  display: contents;
-}
-
-.survey-form__options {
-  text-align: left;
-}
-
-#survey-form__submit {
-  height: 40px;
-  width: 100px;
-  border-radius: 10px;
-  background-color: #336699;
-  color: white;
+fieldset {
   border: none;
-  font-family: Montserrat, Monospace;
-  justify-self: end;
-  margin-right: -50px;
 }
 
-.submitted:valid {
-  background-image: url("http://www.pngmart.com/files/3/Green-Tick-Transparent-PNG.png");
-  background-position: right 8% center;
-  background-size: 6%;
-  background-repeat: no-repeat;
+#survey-form__frequency,#survey-form__recommend {
+  margin-bottom: 25px;
 }
 
-.submitted:invalid {
-  background-image: url("https://cdn2.iconfinder.com/data/icons/color-svg-vector-icons-2/512/warning_alert_attention_search-512.png");
-  background-position: right 8% center;
-  background-size: 6%;
-  background-repeat: no-repeat;
+#survey-form__recommendation {
+  display: grid;
+  grid-template-columns: repeat(5, 110px);
+  grid-gap: 2px;
+  justify-items: start;
+  justify-content: center;
+}
+
+#survey-form__genres {
+  display: grid;
+  grid-template-columns: repeat(3, 20%);
+  grid-template-rows: repeat(4, 25%);
+  grid-row-gap: 3px;
+  justify-items: start;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+#survey-form__platforms {
+  height: 40px;
 }
 
 input,
@@ -90,11 +81,51 @@ textarea {
   -webkit-box-sizing: border-box;
 }
 
-.survey-form__options {
-  display: grid;
-  justify-self: left;
+#survey-form__submit {
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: #336699;
+  color: white;
+  border: none;
+  font-family: Montserrat, Monospace;
+  margin: 25px auto 0px auto;
 }
 
-button:hover {
+#survey-form__submit:hover {
   cursor: pointer;
+}
+
+.survey-form--submitted:valid {
+  background-image: url("http://www.pngmart.com/files/3/Green-Tick-Transparent-PNG.png");
+  background-position: right 8% center;
+  background-size: 6%;
+  background-repeat: no-repeat;
+}
+
+.survey-form--submitted:invalid {
+  background-image: url("https://cdn2.iconfinder.com/data/icons/color-svg-vector-icons-2/512/warning_alert_attention_search-512.png");
+  background-position: right 8% center;
+  background-size: 6%;
+  background-repeat: no-repeat;
+}
+
+
+@media (max-width: 500px) {
+  #description {
+    max-width: 80%;
+  }
+
+  #survey-form__genres {
+    grid-template-columns: repeat(2, 45%);
+    grid-template-rows: repeat(6, 15%);
+    grid-column-gap: 10px;
+  }
+
+  #survey-form__recommendation {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 20px);
+    margin-left: 30%;
+
+  }
 }
