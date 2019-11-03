@@ -67,6 +67,7 @@ fieldset {
   justify-content: center;
   margin-bottom: 20px;
   align-items: center;
+  margin-left: 5%;
 }
 
 #survey-form__platforms {
@@ -111,21 +112,25 @@ textarea {
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 641px) {
+  body {
+    max-width: 95%;
+  }
+
   #description {
     max-width: 80%;
   }
 
+    #survey-form__recommendation {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 20px);
+      margin-left: 40%;
+    }
+
   #survey-form__genres {
-    grid-template-columns: repeat(2, 45%);
+    grid-template-columns: repeat(2, 49%);
     grid-template-rows: repeat(6, 15%);
     grid-column-gap: 10px;
-  }
-
-  #survey-form__recommendation {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 20px);
-    margin-left: 30%;
-
+    margin-left: 18%;
   }
 }
