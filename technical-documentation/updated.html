@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Hotjar | Technical Documentation</title>
+  <meta name="description" content="A technical documentation page made as part of the freeCodeCamp curriculum." />
+  <meta name="keywords" content="hotjar, technical documentation" />
+  <meta name="author" content="Michel Zurkirchen" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="updated.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="div-nav">
+    <label id="hamburger-label"><input id="hamburger-checkbox" type="checkbox"></label>
+    <nav id="navbar">
+      <header>
+        <h1>Hotjar</h1>
+      </header>
+      <p class="navbar__header">Getting started</p>
+      <a class="navbar__link" href="#introduction">Introduction</a>
+      <a class="navbar__link" href="#installation">Installation</a>
+      <a class="navbar__link" href="#triggers">Triggers</a>
+      <p class="navbar__header">Analytics</p>
+      <a class="navbar__link" href="#heatmaps">Heatmaps</a>
+      <a class="navbar__link" href="#recordings">Recordings</a>
+      <a class="navbar__link" href="#funnels">Funnels</a>
+      <a class="navbar__link" href="#forms">Forms</a>
+    </nav>
+  </div>
+
+  <main id="main-doc">
+
+    <section id="introduction" class="main-section">
+      <header>
+        <h2>Introduction</h2>
+      </header>
+      <p class="explanation">Hotjar is a tool that you can utilise to improve the user experience on your website. It comes with various feaures to accomplish this. The first group of features is analytical, meaning it provides you with the ability
+        to analyse what visitors do on your website. The second group of features is feedback based and allows you to ask for feedback from website visitors, to identify in which ways your website is failing to meet your visitors' expectations &mdash; or exceeding them! This
+        technical documentation covers the initial setup and the analytical features.
+      </p>
+    </section>
+
+    <section id="installation" class="main-section">
+      <header>
+        <h2>Installation</h2>
+      </header>
+      <p class="explanation">You can implement Hotjar on your website by using one of two available methods. For both methods you will need the Hotjar Tracking Code, which you can find in the top right corner after logging in by clicking on the
+        <em>Tracking</em> button. This will present you with a snippet of JavaScript code that looks like the below code snippet.</p>
+
+      <p><b>Do not copy the below code, as it does not contain your unique tracking ID!</b></p>
+      <pre id="multi-line-code"><code>
+        &lt;!-- Hotjar Tracking Code for <b>{{YOUR WEBSITE}}</b> -->
+&lt;script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:<b>{{YOUR TRACKING ID}}</b>,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        &lt;/script></code></pre>
+
+      <p>There are two methods to implement Hotjar on your website. The exact steps you need to take in each method will vary slightly depending on which platform you are using.</p>
+
+      <h3>Method #1: Implementation through a tag manager (recommended)</h3>
+      <ol>
+        <li>Copy the Hotjar tracking code from the <em>Tracking</em> section.</li>
+        <li>Create a new tag in your tag manager. Select the type <em>Custom HTML</em>.</li>
+        <li>Paste the tracking code into the tag.</li>
+        <li>Create a trigger to determine when Hotjar should be active. Recommended is all pageviews.</li>
+        <li>Save your configuration.</li>
+      </ol>
+
+      <h3>Method #2: Direct implementation (not recommended)</h3>
+      <ol>
+        <li>Copy the Hotjar tracking code from the <em>Tracking</em> section.</li>
+        <li>Open the header file of your website.</li>
+        <li>Paste the tracking code just before the closing &lt;head> tag.</li>
+        <li>Save your configuration.</li>
+      </ol>
+    </section>
+
+    <section id="triggers" class="main-section">
+      <header>
+        <h2>Triggers</h2>
+      </header>
+      <p class="explanation">When you create a new heatmap, recording, funnel, form or feedback mechanism, you will have to configure the conditions that trigger data collection. The following options are available. Note that some triggers are only
+        available to members on paid
+        plans. Data can only be gathered for pages on which the Hotjar tracking code is installed.</p>
+
+      <h3>Device</h3>
+      <p>The analytics features will automatically capture data from all device types and allow you to segment the data in your report. The feedback features allow you to select which device types you would like to present your feedback mechanism to.
+        You can
+        select desktop, mobile and tablet.</p>
+
+      <h3>Pageview</h3>
+      <p>This allows you to trigger a feature if a user lands on a page on your website. There are different settings to choose from.
+        <br />
+        <ul>
+          <li>Trigger on all pages where the Hotjar tracking code is installed.</li>
+          <li>Group Similar pages &mdash; only available for heatmaps.</li>
+          <li>Trigger on pages that match a condition.</li>
+        </ul>
+
+        To target pages with a condition, you can make use of the following options.
+        <ul>
+          <li>Simple URL match &mdash; Target a URL regardless of any # or ? values.</li>
+          <li>Exact URL match &mdash; Target a URL exactly as specified.</li>
+          <li>URL starts with &mdash; Target all pages which URLs start in a specific way.</li>
+          <li>URL ends with &mdash; Target all pages which URLs end in a specific way.</li>
+          <li>URL contains &mdash; Target all pages which URLs contain something specific.</li>
+          <li>URL regular expression &mdash; Target all pages which URLs match a regular expression.</li>
+        </ul>
+      </p>
+
+      <h3>JavaScript trigger</h3>
+      <p>You can trigger a feature when a website visitor triggers a JavaScript snippet to be fired on your website. This snippet will in turn trigger the Hotjar feature. To use a JavaScript snippet, add the below code to your website and replace
+        TriggerName
+        with a name of your choosing.
+
+        <pre><code class="single-line-code">hj('trigger','TriggerName');</code></pre>
+        <br /> When using a JavaScript trigger to enable a recording, you can automatically tag the recording by adding the below snippet to your trigger.
+
+        <pre><code class="single-line-code">hj('tagRecording',['TriggerName']);</code></pre>
+         You can provide up to 5 tags for your recording. Make sure to always use an array, even when you have only 1 tag. If you send 1 tag as a string, it will be treated like an array and the first 5 characters of the string will
+        individually become
+        a tag.
+         If there is a chance that the JavaScript snippet will be triggered before the Hotjar tracking code is loaded, an error will occur. To prevent this, add the below code above the trigger function.
+
+        <pre><code class="single-line-code">window.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};</code></pre>
+         The full code that should be implemented on your website &mdash; either directly or through a tag manager &mdash; when making use of a JavaScript trigger should be as below, of which the last line is an optional one for recordings.
+
+
+        <pre class="multi-line-code"><code>window.hj=window.hj||function(){(hj.q=hj.q||[]).push(arguments)};
+        hj('trigger','TriggerName');
+        hj('tagRecording',['TriggerName']);</code></pre>
+        <br />
+        <p />
+    </section>
+
+    <section id="heatmaps" class="main-section">
+      <header>
+        <h2>Heatmaps</h2>
+      </header>
+      <p class="explanation">Heatmap is an umbrella term for different types of maps, which have a few characteristics in common. All heatmaps present you with a screenshot of a page of your website with additional data overlayed. This data overlay
+        contains click data, scroll
+        data and move data. The data overlay uses warm colours to represent more activity in an area or on an element and cold colours to represent less activity.
+
+        <ul>
+          <li>Click data shows you how many people have clicked on the elements on a page, both in absolute numbers and in percentages.</li>
+          <li>Scroll data shows you how far page visitors have scrolled down the page, presented in percentages.</li>
+          <li>Move data shows you where page visitors have moved their move to on the page. Only available on desktop.</li>
+        </ul>
+      </p>
+    </section>
+
+    <section id="recordings" class="main-section">
+      <header>
+        <h2>Recordings</h2>
+      </header>
+      <p class="explanation">Recordings will show you a recording of a visitor's visit to your website. The view is nearly the same as you would see if you were to visit the website in your own browser. Key difference is that certain elements are
+        blacklisted from being shown
+        for privacy reasons, such as email addresses and credit card details.
+      </p>
+    </section>
+
+    <section id="funnels" class="main-section">
+      <header>
+        <h2>Funnels</h2>
+      </header>
+      <p class="explanation">The Funnels feature allows you to create a custom funnel of pages that you want visitors to go through and which presents a meaningful sequence to your website &mdash; for instance going from a product to the cart to the
+        checkout and finally the order
+        confirmation. The funnel visualisation will give you insight into how many visitors proceeded from one stage to the next and how many exited the funnel.
+      </p>
+    </section>
+
+    <section id="forms" class="main-section">
+      <header>
+        <h2>Forms</h2>
+      </header>
+      <p class="explanation">The Forms feature allows you to analyse individual forms on your website, such as a registration form. It will track the individual fields within a form and show you how many users completed each field, how many didn't,
+        how long it took and more.
+      </p>
+    </section>
+  </main>
+
+</body>
+
+</html>
