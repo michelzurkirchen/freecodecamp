@@ -5,7 +5,7 @@ function convertToRoman(num) {
     let currentNumber = 0;
     let currentNumeral = '';
 
-    const clear = () => {
+    function clear() {
         digit = 0;
         currentNumber = 0;
         currentNumeral = '';
@@ -33,7 +33,7 @@ function convertToRoman(num) {
             currentNumeral += 'C';
             digit--;
         }
-        currentNumeral = currentNumeral.replace("CCCCCCCC","CM").replace("CCCCCCC","DCCC").replace("CCCCCC","DCC").replace("CCCCC","DC").replace("CCCCC","D").replace("CCCC","CD")
+        currentNumeral = currentNumeral.replace("CCCCCCCCC","CM").replace("CCCCCCCC","DCCC").replace("CCCCCCC","DCC").replace("CCCCCC","DC").replace("CCCCC","D").replace("CCCC","CD")
 
         numRemainder -= currentNumber;
         romanNumeral += currentNumeral;
