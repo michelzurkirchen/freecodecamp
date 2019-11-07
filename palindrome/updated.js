@@ -10,13 +10,13 @@ const palindrome = (str) => {
     startCharacter = str[startIndex].toLowerCase();
     while (!isAlphanumeric(startCharacter)) {
       startIndex++;
-      startCharacter = str[startIndex];
+      startCharacter = str[startIndex].toLowerCase();
     }
 
     endCharacter = str[endIndex].toLowerCase();
     while (!isAlphanumeric(endCharacter)) {
       endIndex--;
-      endCharacter = str[endIndex];
+      endCharacter = str[endIndex].toLowerCase();
     }
 
     if (startCharacter != endCharacter) {
@@ -29,3 +29,5 @@ const palindrome = (str) => {
 
   return true;
   }
+
+  palindrome('.eyE')
