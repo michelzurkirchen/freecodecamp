@@ -1,5 +1,3 @@
-const isAlphanumeric = (character) => { return (/[a-z|A-Z|\d]/).test(character) }
-
 const palindrome = (str) => {
   let startIndex = 0;
   let endIndex = str.length - 1;
@@ -8,13 +6,13 @@ const palindrome = (str) => {
 
   while (startIndex < endIndex) {
     startCharacter = str[startIndex];
-    while (!isAlphanumeric(startCharacter)) {
+    while (!(/[a-z|A-Z|\d]/).test(startCharacter)) {
       startIndex++;
       startCharacter = str[startIndex];
     }
 
     endCharacter = str[endIndex];
-    while (!isAlphanumeric(endCharacter)) {
+    while (!(/[a-z|A-Z|\d]/).test(endCharacter)) {
       endIndex--;
       endCharacter = str[endIndex];
     }
