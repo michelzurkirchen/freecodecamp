@@ -7,19 +7,19 @@ const palindrome = (str) => {
   let endCharacter = '';
 
   while (startIndex < endIndex) {
-    startCharacter = str[startIndex].toLowerCase();
+    startCharacter = str[startIndex];
     while (!isAlphanumeric(startCharacter)) {
       startIndex++;
-      startCharacter = str[startIndex].toLowerCase();
+      startCharacter = str[startIndex];
     }
 
-    endCharacter = str[endIndex].toLowerCase();
+    endCharacter = str[endIndex];
     while (!isAlphanumeric(endCharacter)) {
       endIndex--;
-      endCharacter = str[endIndex].toLowerCase();
+      endCharacter = str[endIndex];
     }
 
-    if (startCharacter != endCharacter) {
+    if (startCharacter.toLowerCase() != endCharacter.toLowerCase()) {
       return false;
     }
 
@@ -29,5 +29,3 @@ const palindrome = (str) => {
 
   return true;
   }
-
-  palindrome('.eyE')
