@@ -1,78 +1,78 @@
-<!DOCTYPE HTML>
+  <!DOCTYPE HTML>
 
-<html lang="en">
+  <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <title>Podcast survey</title>
-  <meta name="description" content="A podcast survey project made as part of the freeCodeCamp curriculum.">
-  <meta name="keywords" content="podcast, survey">
-  <meta name="author" content="Michel Zurkirchen">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="updated.css" type="text/css">
-  <script type="text/javascript" src="updated.js"></script>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Podcast survey</title>
+    <meta name="description" content="A podcast survey project made as part of the freeCodeCamp curriculum.">
+    <meta name="keywords" content="podcast, survey">
+    <meta name="author" content="Michel Zurkirchen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="updated.css" type="text/css">
+    <script type="text/javascript" src="updated.js"></script>
+  </head>
 
-<body>
-  <main>
-    <header>
-      <h1>Podcast survey</h1>
-    </header>
-    <p id="description">We believe that podcasts can be done better. Help us to develop a better platform for millions of podcast listeners world wide.</p>
+  <body>
+    <main>
+      <header>
+        <h1>Podcast survey</h1>
+      </header>
+      <p id="description">We believe that podcasts can be done better. Help us to develop a better platform for millions of podcast listeners world wide.</p>
 
-    <form id="survey-form">
-      <label class="survey-form__label" for="survey-form__name">Name</label>
-      <input id="survey-form__name" class="survey-form__box" type="text" required autocomplete="on" autofocus pattern="([a-zA-Z]|-){2,30} ([a-zA-Z]|-){2,30}" placeholder="Your full name" onblur="validate()">
+      <form id="survey-form">
+        <label class="survey-form__label" for="survey-form__name">Name</label>
+        <input id="survey-form__name" class="survey-form__box" type="text" required autocomplete="on" autofocus pattern="([a-zA-Z]|-){2,30} ([a-zA-Z]|-){2,30}" placeholder="Your full name" onblur="validate()">
 
-      <label class="survey-form__label" for="survey-form__email">Email</label>
-      <input id="survey-form__email" class="survey-form__box" type="email" required autocomplete="on" placeholder="Your email address" onblur="validate()">
+        <label class="survey-form__label" for="survey-form__email">Email</label>
+        <input id="survey-form__email" class="survey-form__box" type="email" required autocomplete="on" placeholder="Your email address" onblur="validate()">
 
-      <label class="survey-form__label" for="survey-form__age">Your age</label>
-      <input id="survey-form__age" class="survey-form__box" type="number" min="13" max="100" placeholder="Your age" onblur="validate()">
+        <label class="survey-form__label" for="survey-form__age">Your age</label>
+        <input id="survey-form__age" class="survey-form__box" type="number" min="13" max="100" placeholder="Your age" onblur="validate()">
 
-      <label class="survey-form__label" for="survey-form__frequency">How often do you listen to podcasts?</label>
-      <select id="survey-form__frequency" class="survey-form__box">
-        <option value="daily">Every day</option>
-        <option value="frequent">A few times a week</option>
-        <option value="weekly">Once a week</option>
-        <option value="infrequent">Less than once a week</option>
-      </select>
+        <label class="survey-form__label" for="survey-form__frequency">How often do you listen to podcasts?</label>
+        <select id="survey-form__frequency" class="survey-form__box">
+          <option value="daily">Every day</option>
+          <option value="frequent">A few times a week</option>
+          <option value="weekly">Once a week</option>
+          <option value="infrequent">Less than once a week</option>
+        </select>
 
-      <fieldset id="survey-form__recommend">
-        <legend class="survey-form__label">How likely are you to recommend a podcast to someone?</legend>
-        <div id="survey-form__recommendation" class="survey-form__options">
-          <label><input type="radio" name="recommend" value="5">Very likely</label>
-          <label><input type="radio" name="recommend" value="4">Likely</label>
-          <label><input type="radio" name="recommend" value="3">Neutral</label>
-          <label><input type="radio" name="recommend" value="2">Unlikely</label>
-          <label><input type="radio" name="recommend" value="1">Very unlikely</label>
-        </div>
-      </fieldset>
+        <fieldset id="survey-form__recommend">
+          <legend class="survey-form__label">How likely are you to recommend a podcast you like to someone?</legend>
+          <div id="survey-form__recommendation" class="survey-form__options">
+            <label><input type="radio" name="recommend" value="5">Very likely</label>
+            <label><input type="radio" name="recommend" value="4">Likely</label>
+            <label><input type="radio" name="recommend" value="3">Neutral</label>
+            <label><input type="radio" name="recommend" value="2">Unlikely</label>
+            <label><input type="radio" name="recommend" value="1">Very unlikely</label>
+          </div>
+        </fieldset>
 
-      <fieldset id="survey-form__genre">
-        <legend class="survey-form__label">Which genre(s) do you listen to?</legend>
-        <div id="survey-form__genres" class="survey-form__options">
-          <label><input type="checkbox" name="genre" value="business">Business</label>
-          <label><input type="checkbox" name="genre" value="comedy">Comedy</label>
-          <label><input type="checkbox" name="genre" value="educational">Educational</label>
-          <label><input type="checkbox" name="genre" value="fiction">Fiction</label>
-          <label><input type="checkbox" name="genre" value="gaming">Gaming</label>
-          <label><input type="checkbox" name="genre" value="interview">Interview</label>
-          <label><input type="checkbox" name="genre" value="music">Music</label>
-          <label><input type="checkbox" name="genre" value="news">News</label>
-          <label><input type="checkbox" name="genre" value="politics">Politics</label>
-          <label><input type="checkbox" name="genre" value="sports">Sports</label>
-          <label><input type="checkbox" name="genre" value="tech">Tech</label>
-          <label><input type="checkbox" name="genre" value="other">Other</label>
-        </div>
-      </fieldset>
+        <fieldset id="survey-form__genre">
+          <legend class="survey-form__label">Which genre(s) do you listen to?</legend>
+          <div id="survey-form__genres" class="survey-form__options">
+            <label><input type="checkbox" name="genre" value="business">Business</label>
+            <label><input type="checkbox" name="genre" value="comedy">Comedy</label>
+            <label><input type="checkbox" name="genre" value="educational">Educational</label>
+            <label><input type="checkbox" name="genre" value="fiction">Fiction</label>
+            <label><input type="checkbox" name="genre" value="gaming">Gaming</label>
+            <label><input type="checkbox" name="genre" value="interview">Interview</label>
+            <label><input type="checkbox" name="genre" value="music">Music</label>
+            <label><input type="checkbox" name="genre" value="news">News</label>
+            <label><input type="checkbox" name="genre" value="politics">Politics</label>
+            <label><input type="checkbox" name="genre" value="sports">Sports</label>
+            <label><input type="checkbox" name="genre" value="tech">Tech</label>
+            <label><input type="checkbox" name="genre" value="other">Other</label>
+          </div>
+        </fieldset>
 
-      <label for="survey-form__platforms" class="survey-form__label">On which platforms do you listen to podcasts?</label>
-      <textarea id="survey-form__platforms" rows="4" cols="4" class="survey-form__box"></textarea>
-      <button id="survey-form__submit" type="submit">Submit</button>
-    </form>
+        <label for="survey-form__platforms" class="survey-form__label">On which platforms do you listen to podcasts?</label>
+        <textarea id="survey-form__platforms" rows="4" cols="4" class="survey-form__box"></textarea>
+        <button id="survey-form__submit" type="submit">Submit</button>
+      </form>
 
-  </main>
-</body>
+    </main>
+  </body>
 
-</html>
+  </html>

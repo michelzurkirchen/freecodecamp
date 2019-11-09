@@ -2,7 +2,8 @@
 
 body {
   background-color: #f0f0f0;
-  max-width: 80%;
+  min-height: 100%;
+  min-width: 100%;
   text-align: center;
   margin: auto;
   font-family: Montserrat, Monospace;
@@ -15,7 +16,7 @@ h1 {
 
 #description {
   text-align: justify;
-  max-width: 50%;
+  max-width: 80%;
   margin: 20px auto;
 }
 
@@ -23,7 +24,6 @@ h1 {
   display: flex;
   flex-direction: column;
   background-color: #86bbd8;
-  border-radius: 15px;
   padding-top: 10px;
   padding-bottom: 80px;
 
@@ -52,23 +52,26 @@ fieldset {
 
 #survey-form__recommendation {
   display: grid;
-  grid-template-columns: repeat(5, 110px);
-  grid-gap: 2px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 20px);
+  margin-left: 40%;
   justify-items: start;
   justify-content: center;
 }
 
 #survey-form__genres {
   display: grid;
-  grid-template-columns: repeat(3, 20%);
-  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: repeat(2, 49%);
+  grid-template-rows: repeat(6, 15%);
+  grid-column-gap: 10px;
   grid-row-gap: 3px;
   justify-items: start;
   justify-content: center;
-  margin-bottom: 20px;
   align-items: center;
-  margin-left: 5%;
+  margin-left: 18%;
 }
+
+
 
 #survey-form__platforms {
   height: 40px;
@@ -111,26 +114,18 @@ textarea {
   background-repeat: no-repeat;
 }
 
+@media (min-width: 768px) {
 
-@media (max-width: 641px) {
-  body {
-    max-width: 95%;
+  #survey-form__recommendation {
+    grid-template-columns: repeat(5, 110px);
+    grid-template-rows: 1fr;
+    grid-gap: 2px;
+    margin: auto;
   }
-
-  #description {
-    max-width: 80%;
-  }
-
-    #survey-form__recommendation {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(5, 20px);
-      margin-left: 40%;
-    }
 
   #survey-form__genres {
-    grid-template-columns: repeat(2, 49%);
-    grid-template-rows: repeat(6, 15%);
-    grid-column-gap: 10px;
-    margin-left: 18%;
+    grid-template-columns: repeat(3, 20%);
+    grid-template-rows: repeat(4, 25%);
+    margin-left: 8%;
   }
 }
