@@ -2,7 +2,7 @@
 
 
 body {
-  width: 70%;
+  width: 80%;
   margin: auto;
   background-color: #ededed;
   font-family: Lato, georgia, sans-serif;
@@ -26,21 +26,23 @@ p {
 
 #profile-img {
   display: block;
-  max-width: 25%;
-  margin: auto;
+  max-width: 50%;
+  margin: 20px auto 10px auto;
   border: 2px solid white;
   border-radius: 50%;
 }
 
 #profile-img-caption {
   text-align: center;
-  margin-top: 1%;
+  margin-bottom: 20px;
+  font-size: 14px;
 }
 
 .icons {
   display: grid;
   grid-template-columns: repeat(5, 50px);
-  justify-content: left;
+  justify-content: center;
+  margin-top: 20px;
   align-items: end;
   grid-column-gap: 2%;
 }
@@ -49,23 +51,17 @@ p {
   width: 25px;
 }
 
-@media (max-width: 500px) {
+@media (min-width: 768px) {
   body {
-    width: 80%;
+    width: 70%;
   }
 
   #profile-img {
-    max-width: 50%;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    max-width: 25%;
+    margin: auto;
   }
 
   #profile-img-caption {
-    margin-bottom: 20px;
-  }
-
-  .icons {
-    margin-top: 20px;
-    justify-content: center;
+    margin-top: 2%;
   }
 }
