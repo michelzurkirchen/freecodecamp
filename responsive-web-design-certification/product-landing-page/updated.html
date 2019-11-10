@@ -1,8 +1,9 @@
 <!DOCTYPE HTML>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <html lang="en">
+
   <title>Cliro | Climbing Ropes</title>
   <meta name="description" content="A product landing page for climbing ropes made as part of the freeCodeCamp curriculum.">
   <meta name="keywords" content="cliro, climbing, climbing ropes">
@@ -13,7 +14,8 @@
 
 <body>
   <header id="header">
-    <a id="logo-anchor" href="#main"><img id="logo" src="https://www.claroscuro.de/wp-content/uploads/2017/08/claroscuro-hannover-fashion-brand-icon-home-logo-mountain-grey-color-modern-minimalist-shop-backpacks-rucksacks-handbags-taschen.png" alt="Cliro logo"></a>
+    <a id="logo-anchor" href="#main"><img id="logo" src="https://www.claroscuro.de/wp-content/uploads/2017/08/claroscuro-hannover-fashion-brand-icon-home-logo-mountain-grey-color-modern-minimalist-shop-backpacks-rucksacks-handbags-taschen.png"
+        alt="Cliro logo"></a>
     <nav id="navbar">
       <a class="navbar__nav-link" href="#features">FEATURES</a>
       <a class="navbar__nav-link" href="#ropes">ROPES</a>
@@ -22,14 +24,43 @@
   </header>
 
   <main id="main">
+
     <section id="features" class="anchor">
-      <h2>Features</h2>
-      <img class="features__usp-icon" src="#" alt="">
-      <p class="features__usp-description">Thin</p>
-      <img class="features__usp-icon" src="#" alt="">
-      <p class="features__usp-description">Lightweight</p>
-      <img class="features__usp-icon" src="#" alt="">
-      <p class="features__usp-description">Dirt and water resistant</p>
+      <h2>FEATURES</h2>
+      <div class="container-3">
+        <img class="features__usp-icon" src="https://cdn2.iconfinder.com/data/icons/miscellaneous-7/100/SlimLightweight-512.png" alt="">
+        <p class="features__usp-description">Our ropes are <span class=features__usp--emphasis>thin</span>, ensuring that they are always easy to handle.</p>
+
+        <img class="features__usp-icon" src="https://image.flaticon.com/icons/svg/117/117542.svg" alt="">
+        <p class="features__usp-description">Our ropes are <span class=features__usp--emphasis>lightweight</span> so that you never have to carry much weight.</p>
+        <img class="features__usp-icon" src="https://image.shutterstock.com/image-vector/dust-proof-icon-vector-illustration-600w-514097221.jpg" alt="">
+        <p class="features__usp-description">Our ropes are <span class=features__usp--emphasis>dirt and water resistant</span>, making them extra durable.</p>
+      </div>
+    </section>
+
+    <section id="ropes" class="anchor">
+      <h2>ROPES</h2>
+      <div>
+
+        <div id="tendon" class="ropes__rope">
+          <h3 class="ropes__rope__title">TENDON MASTER 8.9</h3>
+          <img class="ropes__rope__image" src="https://www.klimwinkel.nl/assets/images/shop1/products/1554372971IMG20348-Edit_5d282e93ca7cd5.27579762.png" alt="Tendon Master 8.9">
+          <p class="ropes__rope__price"><span class="ropes__rope__price--euro">€ 196</span>,<span class="ropes__rope__price--cent">00</span></p>
+        </div>
+
+        <div id="beal" class="ropes__rope">
+          <h3 class="ropes__rope__title">BEAL TIGER 10.0</h3>
+          <img class="ropes__rope__image" src="https://www.klimwinkel.nl/assets/images/shop1/products/TIGER_10_DC_FUSCHIA_BEAL-CRESPEAU-web_5a0ee8b3efd944.04555332.jpg" alt="Beal Tiger 10.0">
+          <p class="ropes__rope__price"><span class="ropes__rope__price--euro">€ 125</span>,<span class="ropes__rope__price--cent">50</span></p>
+        </div>
+
+        <div id="black-diamond" class="ropes__rope">
+          <h3 class="ropes__rope__title">BLACK DIAMOND 9.4</h3>
+          <img class="ropes__rope__image" src="https://www.klimwinkel.nl/assets/images/shop1/products/323022_ENGR_EnvyGreen_94-60m-Dry_Main_5c78fccd291ed0.64580550.jpg" alt="Black Diamond 9.4">
+          <p class="ropes__rope__price"><span class="ropes__rope__price--euro">€ 189</span>,<span class="ropes__rope__price--cent">95</span></p>
+        </div>
+
+      </div>
     </section>
 
     <section id="newsletter" class="anchor">
@@ -42,34 +73,9 @@
       </div>
     </section>
 
-    <section id="ropes" class="anchor">
-      <h2>Ropes</h2>
-      <div>
-
-        <div id="beal" class="ropes__rope">
-          <h3 class="ropes__rope__title">One off</h3>
-          <p class="ropes__rope__description">You don't need help often, just this one time.</p>
-          <p class="ropes__rope__price">€50 / hour</p>
-        </div>
-
-        <div id="edelrid" class="ropes__rope">
-          <h3 class="ropes__rope__title">Strip</h3>
-          <p class="ropes__rope__description">You need help occasionally, but not all the time.</p>
-          <p class="ropes__rope__price">€40 / hour</p>
-        </div>
-
-        <div id="black-diamond" class="ropes__rope">
-          <h3 class="ropes__rope__title">Subscription</h3>
-          <p class="ropes__rope__description">You're a busy person and need assistance on a regular basis.</p>
-          <p class="ropes__rope__price">Custom rate</p>
-        </div>
-
-      </div>
-    </section>
-
     <section id="help" class="anchor">
-      <h2>Help</h2>
-      <p>Not sure which rope to choose? This video will teach you everything you need to know to choose the rope best for you.</p>
+      <h2>HELP</h2>
+      <p>Not sure which rope to choose? This video will help you make the right decision.</p>
       <iframe id="video" width="727" height="409" src="https://www.youtube.com/embed/7RDBqxb4nI4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
