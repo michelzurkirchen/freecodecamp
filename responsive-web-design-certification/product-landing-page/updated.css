@@ -64,13 +64,9 @@ main {
 }
 
 .features__usp-icon {
-  justify-self: left;
+  justify-self: center;
   width: auto;
   max-height: 80px;
-}
-
-.features__usp-icon:nth-last-child(2) {
-  margin-left: 15px;
 }
 
 .features__usp-description {
@@ -122,6 +118,14 @@ main {
 }
 
 /*
+
+@media (min-width: 768px) {
+  .features__usp-icon:nth-last-child(2) {
+    margin-left: 0px;
+  }
+}
+
+
 h3 {
   font-size: 21px;
   color: #66ccff;
