@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class FullQuote extends React.Component {
@@ -11,6 +10,7 @@ class FullQuote extends React.Component {
       currentFullQuote: ""
     };
     this.handleChange = this.handleChange.bind(this);
+    this.tweet = this.tweet.bind(this);
   }
 
   componentDidMount() {
@@ -35,19 +35,24 @@ class FullQuote extends React.Component {
     });
   }
 
+  tweet() {
+    let quote = this.state.currentFullQuote["quote"];
+    quote = (quote.includes(";")) ? quote.replace(";","%3B") : quote
+    const author = this.state.currentFullQuote["name"];
+    const tw = `"${quote}" - ${author}`;
+    window.open("https://twitter.com/intent/tweet?text=" + tw);
+  }
+
   render() {
     return (
-      <div>
-        <div className="box"><p id="text">{this.state.currentFullQuote["quote"]}</p>
+      <React.Fragment>
+        <div id="quote-container"><p id="text">{this.state.currentFullQuote["quote"]}</p>
           <p id="author">- {this.state.currentFullQuote["name"]}</p></div>
         <div className="buttons">
-          <a id="tweet-quote" href={`https://twitter.com/intent/tweet?text=\"${
-            this.state.currentFullQuote["quote"]
-          }\" - ${this.state.currentFullQuote["name"]}`}
-            target="_blank"><i className="fa fa-twitter-square fa-3x"></i></a>
+          <a id="tweet-quote" href="#" onClick={this.tweet}><i className="fa fa-twitter-square fa-3x"></i></a>
           <button className="btn btn-secondary" id="new-quote" onClick={this.handleChange}>Next</button>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

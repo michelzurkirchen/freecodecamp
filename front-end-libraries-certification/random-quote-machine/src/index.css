@@ -4,19 +4,19 @@ body {
   font-family: Lora;
 }
 
-#quote-box {
+#quote-container {
   max-width: 80%;
   margin: 25vh auto 0vh auto;
 }
 
 #text {
-  font-size: 30px;
-  text-align: center;
+  font-size: 24px;
+  text-align: justify;
   margin: auto;
 }
 
 #author {
-  font-size: 22px;
+  font-size: 20px;
   text-align: center;
   margin: 20px auto 0px auto;
 }
@@ -31,14 +31,4 @@ body {
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   max-width: 400px;
-}
-
-@media (max-width: 700px) {
-  #text {
-    font-size: 20px;
-  }
-
-  #author {
-    font-size: 16px;
-  }
 }
