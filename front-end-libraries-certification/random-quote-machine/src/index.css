@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Lora&display=swap");
+
+body {
+  font-family: Lora;
+}
+
+#quote-box {
+  max-width: 80%;
+  margin: 25vh auto 0vh auto;
+}
+
+#text {
+  font-size: 30px;
+  text-align: center;
+  margin: auto;
+}
+
+#author {
+  font-size: 22px;
+  text-align: center;
+  margin: 20px auto 0px auto;
+}
+
+.box {
+  min-height: 223px;
+}
+
+.buttons {
+  display: grid;
+  margin: 40px auto 0px auto;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  max-width: 400px;
+}
+
+@media (max-width: 700px) {
+  #text {
+    font-size: 20px;
+  }
+
+  #author {
+    font-size: 16px;
+  }
+}
