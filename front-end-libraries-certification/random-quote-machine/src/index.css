@@ -2,27 +2,26 @@
 
 body {
   font-family: Lora;
+  background-image: url("http://getwallpapers.com/wallpaper/full/d/e/d/960967-cool-calm-background-1920x1080.jpg");
 }
 
 #quote-container {
   max-width: 80%;
-  margin: 25vh auto 0vh auto;
+  margin: 15vh auto 0vh auto;
+  display: grid;
+  grid-template-rows: 250px 50px;
 }
 
 #text {
-  font-size: 24px;
+  font-size: 20px;
   text-align: justify;
   margin: auto;
 }
 
 #author {
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   margin: 20px auto 0px auto;
-}
-
-.box {
-  min-height: 223px;
 }
 
 .buttons {
@@ -30,5 +29,25 @@ body {
   margin: 40px auto 0px auto;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-  max-width: 400px;
+}
+
+i {
+  color: #000000;
+}
+
+@media (min-width: 768px) {
+  i[class*="twitter"] {
+    margin-left: 100px;
+  }
+
+  i[class*="redo"] {
+    margin-right: 100px;
+  }
+}
+
+
+
+
+a:hover {
+  cursor: pointer;
 }

@@ -9,7 +9,7 @@ class FullQuote extends React.Component {
       quotesLength: 0,
       currentFullQuote: ""
     };
-    this.handleChange = this.handleChange.bind(this);
+    this.nextTweet = this.nextTweet.bind(this);
     this.tweet = this.tweet.bind(this);
   }
 
@@ -27,7 +27,7 @@ class FullQuote extends React.Component {
       );
   }
 
-  handleChange() {
+  nextTweet() {
     this.setState({
       currentFullQuote: this.state.quotes[
         Math.floor(Math.random() * this.state.quotesLength)
@@ -49,8 +49,8 @@ class FullQuote extends React.Component {
         <div id="quote-container"><p id="text">{this.state.currentFullQuote["quote"]}</p>
           <p id="author">- {this.state.currentFullQuote["name"]}</p></div>
         <div className="buttons">
-          <a id="tweet-quote" href="#" onClick={this.tweet}><i className="fa fa-twitter-square fa-3x"></i></a>
-          <button className="btn btn-secondary" id="new-quote" onClick={this.handleChange}>Next</button>
+          <a id="tweet-quote" href="#" onClick={this.tweet}><i className="fab fa-twitter-square fa-3x"></i></a>
+          <a id="new-quote" href="#" onClick={this.nextTweet}><i className="fas fa-redo-alt fa-3x"></i></a>
         </div>
       </React.Fragment>
     );
