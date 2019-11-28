@@ -1,18 +1,16 @@
 body {
   background-image: url("/background.jpg");
-  background-size: cover;
-  background-position: 0% 40%;
-  background-repeat: no-repeat;
+  background-size: 100%;
   text-align: center;
   font-family: sans-serif;
 }
 
-#drum-machine {
+#root {
   display: grid;
-  grid-row-gap: 20px;
-  max-width: 260px;
-  margin: 10vh auto;
-  padding: 20px;
+  margin-top: 10vh;
+  justify-content: center;
+  grid-template-rows: 1fr 4fr;
+  grid-row-gap: 30px;
 }
 
 #machine {
@@ -24,9 +22,10 @@ body {
   background-color: white;
   opacity: 0.5;
   padding-top: 10px;
-  min-height: 30px;
+  min-height: 50px;
   width: 260px;
   border-radius: 5px;
+  font-size: 2em;
 }
 
 #buttons-container {
@@ -37,9 +36,10 @@ body {
 
 }
 
-.drum-pad {
+.drumpad {
   color: white;
   background-color: transparent;
   border: 1px solid white;
   border-radius: 5px;
+  font-size: 1.5em;
 }
