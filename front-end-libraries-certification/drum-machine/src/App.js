@@ -29,7 +29,9 @@ class DrumMachine extends React.Component {
   playSound (e) {
     const k = (typeof e === 'object') ? e.target.innerText : e
     this.setState({ activeKey: k })
-    const el = document.getElementById(k)
+    const el = document.getElementById(k);
+    const active = document.getElementById('drumpad-' + k);
+    active.classList.add('active');
     if (el.paused) {
       el.play()
     } else {
@@ -37,7 +39,9 @@ class DrumMachine extends React.Component {
     }
   }
 
-  resetActive () {
+  resetActive (e) {
+    const el = document.getElementById('drumpad-' + e.target.id);
+    el.classList.remove('active');
     this.setState({ activeKey: '' })
   }
 
