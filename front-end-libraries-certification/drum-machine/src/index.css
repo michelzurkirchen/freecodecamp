@@ -1,6 +1,7 @@
 body {
-  background-image: url("/background.jpg");
-  background-size: 100%;
+  background-image: url("/background_mobile.jpg");
+  background-position: 20% 30%;
+  background-attachment: fixed;
   text-align: center;
   font-family: sans-serif;
 }
@@ -46,5 +47,12 @@ body {
 
 .active {
   background-color: #e3e3e3;
-  border: 1px solid grey;
+  border: 1px solid #E7BC0E;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("/background_desktop.jpg");
+    background-position: left;
+  }
 }
